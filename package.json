@@ -34,7 +34,8 @@
   "dependencies": {
     "moment": "^2.12.0",
     "node-forge": "^0.6.39",
-    "soap": "^0.13.0"
+    "soap": "^0.13.0",
+    "xml-c14n": "0.0.6"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",

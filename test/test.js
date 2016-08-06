@@ -1,10 +1,10 @@
 'use strict';
 
-import {Document} from '../src/document';
-import {expect} from 'chai';
-import fs from 'fs';
-import path from 'path';
-import {parseString} from 'xml2js';
+const Document = require('../src/document').Document;
+const expect = require('chai').expect;
+const fs = require('fs');
+const path = require('path');
+const parseString = require('xml2js').parseString;
 
 process.env.TBK_COMMERCE_KEY = fs.readFileSync(path.join(__dirname, 'keys', '597029124456.key'));
 process.env.TBK_COMMERCE_CRT = fs.readFileSync(path.join(__dirname, 'keys', '597029124456.crt'));

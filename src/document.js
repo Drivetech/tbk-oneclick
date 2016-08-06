@@ -1,10 +1,10 @@
 'use strict';
 
-import moment from 'moment';
-import crypto from 'crypto';
-import {pki} from 'node-forge';
+const moment = require('moment');
+const crypto = require('crypto');
+const pki = require('node-forge').pki;
 
-export class Document {
+const Document = class Document {
 
   constructor(action, params) {
     this._action = action;
@@ -82,5 +82,8 @@ export class Document {
     // 4) build headers
     return `<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:CanonicalizationMethod><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></ds:SignatureMethod><ds:Reference URI="#${bodyId}"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"></ds:Transform></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod><ds:DigestValue>${digestValue}</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>${signatureValue}</ds:SignatureValue><ds:KeyInfo><wsse:SecurityTokenReference><ds:X509Data><ds:X509IssuerSerial><ds:X509IssuerName>${this.getIssuerName()}</ds:X509IssuerName><ds:X509SerialNumber>${this.getSerialNumber()}</ds:X509SerialNumber></ds:X509IssuerSerial></ds:X509Data></wsse:SecurityTokenReference></ds:KeyInfo></ds:Signature></wsse:Security></SOAP-ENV:Header><SOAP-ENV:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="${bodyId}"><ns1:${this._action} xmlns:ns1="http://webservices.webpayserver.transbank.com/"><arg0>${bodyParams}</arg0></ns1:${this._action}></SOAP-ENV:Body></SOAP-ENV:Envelope>`;
   }
-}
+};
 
+module.exports = {
+  Document: Document
+};

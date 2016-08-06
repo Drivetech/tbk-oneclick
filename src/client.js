@@ -1,12 +1,12 @@
 'use strict';
 
-import soap from 'soap';
-import {Response} from './response';
+const soap = require('soap');
+const Response = require('./response').Response;
 
-export class Client {
+const Client = class Client {
 
-  constructor(testing=false) {
-    this._testing = testing;
+  constructor(testing) {
+    this._testing = testing || false;
     const testingLoc = 'https://tbk.orangepeople.cl/webpayserver/wswebpay/OneClickPaymentService';
     const productionLoc = 'https://webpay3g.transbank.cl:443/webpayserver/wswebpay/OneClickPaymentService';
     this.location = testing ? testingLoc : productionLoc;
@@ -31,4 +31,8 @@ export class Client {
       }
     }
   }
-}
+};
+
+module.exports = {
+  Client: Client
+};

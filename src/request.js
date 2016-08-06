@@ -1,6 +1,6 @@
 'use strict';
 
-export class Request {
+const Request = class Request {
 
   constructor(params) {
     this._params = params;
@@ -9,4 +9,8 @@ export class Request {
   params() {
     return this._params;
   }
-}
+};
+
+module.exports = {
+  Request: Request
+};

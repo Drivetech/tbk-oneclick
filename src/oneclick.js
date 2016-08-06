@@ -1,15 +1,15 @@
 'use strict';
 
-import Document from './document';
-import Request from './request';
-import Client from './client';
-import logger from './logging';
+const Document = require('./document');
+const Request = require('./request');
+const Client = require('./client');
+const logger = require('./logging');
 
 
-export class OneClick {
+const OneClick = class OneClick {
 
-  constructor(testing=false) {
-    this.client = new Client(testing);
+  constructor(testing) {
+    this.client = new Client(testing || false);
   }
 
   initInscription(email, responseUrl, username) {
@@ -61,4 +61,8 @@ export class OneClick {
     logger.generic('removeUser', request, response);
     return response;
   }
-}
+};
+
+module.exports = {
+  OneClick: OneClick
+};

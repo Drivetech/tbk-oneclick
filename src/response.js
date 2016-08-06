@@ -1,8 +1,8 @@
 'use strict';
 
-import xmlC14n from 'xml-c14n';
-import {pki} from 'node-forge';
-import xml2js from 'xml2js';
+const xmlC14n = require('xml-c14n');
+const pki = require('node-forge').pki;
+const xml2js = require('xml2js');
 
 const RESPONSE_CODE = {
   Authorize: {
@@ -37,11 +37,11 @@ const VALID_RESPONSE_PARAMS = {
   'removeUser': ['removed']
 };
 
-export class Response {
+const Response = class Response {
 
-  constructor(content, action, testing=false) {
+  constructor(content, action, testing) {
     this.error = null;
-    this._testing = testing;
+    this._testing = testing || false;
     this.content = this._canonicalize(content);
     this.action = action;
     this.xmlResponse = this.buildXmlResponse(content);
@@ -220,4 +220,8 @@ export class Response {
       }
     }
   }
-}
+};
+
+module.exports = {
+  Response: Response
+};

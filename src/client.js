@@ -1,6 +1,6 @@
 'use strict';
 
-const soap = require('soap');
+const {soap} = require('strong-soap');
 const Response = require('./response').Response;
 
 const Client = class Client {

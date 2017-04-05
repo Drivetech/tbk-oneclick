@@ -1,7 +1,5 @@
 # tbk-oneclick
 
-[![npm version](https://img.shields.io/npm/v/tbk-oneclick.svg?style=flat-square)](https://www.npmjs.com/package/tbk-oneclick)
-[![npm downloads](https://img.shields.io/npm/dm/tbk-oneclick.svg?style=flat-square)](https://www.npmjs.com/package/tbk-oneclick)
 [![Build Status](https://img.shields.io/travis/lgaticaq/tbk-oneclick.svg?style=flat-square)](https://travis-ci.org/lgaticaq/tbk-oneclick)
 [![Coverage Status](https://img.shields.io/coveralls/lgaticaq/tbk-oneclick/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/tbk-oneclick?branch=master)
 [![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/tbk-oneclick.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/tbk-oneclick)
@@ -10,13 +8,11 @@
 
 > Node Implementation of Transbank Oneclick API SOAP
 
-Inspired by https://github.com/cornershop/python-oneclick
+Inspired by [python-oneclick](https://github.com/cornershop/python-oneclick)
 
-## Installation
+## Note
 
-```bash
-npm i -S tbk-oneclick
-```
+WIP, library incomplete.
 
 ## License
 

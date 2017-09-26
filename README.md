@@ -5,6 +5,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/tbk-oneclick.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/tbk-oneclick)
 [![dependency Status](https://img.shields.io/david/lgaticaq/tbk-oneclick.svg?style=flat-square)](https://david-dm.org/lgaticaq/tbk-oneclick#info=dependencies)
 [![devDependency Status](https://img.shields.io/david/dev/lgaticaq/tbk-oneclick.svg?style=flat-square)](https://david-dm.org/lgaticaq/tbk-oneclick#info=devDependencies)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flgaticaq%2Ftbk-oneclick.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flgaticaq%2Ftbk-oneclick?ref=badge_shield)
 
 > Node Implementation of Transbank Oneclick API SOAP
 
@@ -17,3 +18,6 @@ WIP, library incomplete.
 ## License
 
 [MIT](https://tldrlegal.com/license/mit-license)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flgaticaq%2Ftbk-oneclick.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flgaticaq%2Ftbk-oneclick?ref=badge_large)

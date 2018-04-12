@@ -44,7 +44,7 @@
     "eslint": "4.19.1",
     "generate-changelog": "1.7.1",
     "istanbul": "0.4.5",
-    "mocha": "5.0.5",
+    "mocha": "5.1.0",
     "xml2js": "0.4.19"
   },
   "eslintConfig": {

@@ -10,7 +10,9 @@
     "codeclimate": "codeclimate-test-reporter < coverage/lcov.info",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4"
@@ -35,7 +37,8 @@
     "moment": "^2.14.1",
     "node-forge": "^0.10.0",
     "strong-soap": "^1.1.0",
-    "xml-c14n": "^0.0.6"
+    "xml-c14n": "^0.0.6",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "4.3.4",
@@ -72,5 +75,6 @@
         "always"
       ]
     }
-  }
+  },
+  "snyk": true
 }

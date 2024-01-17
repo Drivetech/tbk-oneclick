@@ -34,7 +34,7 @@
   "dependencies": {
     "moment": "^2.14.1",
     "node-forge": "^0.10.0",
-    "strong-soap": "^1.1.0",
+    "strong-soap": "^3.0.0",
     "xml-c14n": "^0.0.6"
   },
   "devDependencies": {
